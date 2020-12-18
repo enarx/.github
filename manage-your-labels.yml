@@ -1,0 +1,117 @@
+LABEL_GROUPS:
+    DEFAULT:
+        bug:
+            description: Something isn't working
+            color: d73a4a
+        debt:
+            description: Issues to deal with later
+            color: 0c0c75
+        dependencies:
+            description: Pull requests that update a dependency file
+            color: 0366d6
+        documentation:
+            description: Improvements or additions to documentation
+            color: efef15
+        duplicate:
+            description: This issue or pull request already exists
+            color: cfd3d7
+        enarxbot:
+            description: Issues or feature requests for the Enarx project automation suite
+            color: D3A960
+        enhancement:
+            description: New feature or request
+            color: a2eeef
+        expertise needed:
+            description: This needs special attention from an area specialist.
+            color: f9928e
+        good first issue:
+            description: Good for newcomers
+            color: a8f475
+        help wanted:
+            description: Extra attention is needed
+            color: '008672'
+        infrastructure:
+            description: General issues around project infrastructure
+            color: ffdda8
+        invalid:
+            description: This doesn't seem right
+            color: e4e669
+        meta:
+            description: Larger project tasks and goals
+            color: 149e7b
+        question:
+            description: Further information is requested
+            color: d876e3
+        research:
+            description: 'Topics to investigate further'
+            color: ed8661
+        security:
+            description: Issues that have security implications
+            color: ff0000
+        stretch-goal:
+            description: Tasks that have been assigned, but are lower-priority than other items.
+            color: 006b75
+        wontfix:
+            description: This will not be worked on
+            color: ffffff
+    technology:
+        amd sev:
+            description: Issues related to AMD SEV
+            color: '000000'
+        attestation:
+            description: Issues related to attestation
+            color: 71DDB8
+        client:
+            description: Issues related to the Enarx client
+            color: 0052cc
+        ibm pef:
+            description: Issues related to IBM PEF
+            color: 0043ce
+        intel sgx:
+            description: Issues related to Intel SGX
+            color: 0071c5
+        wasm:
+            description: Issues related to WebAssembly
+            color: 654EF0
+        host-components:
+            description: Components that live on the host, but not in Keeps
+            color: f22933
+        syscall:
+            description: syscall-related issues and PRs
+            color: a51f3c
+        testing:
+            description: Issues related to testing Enarx
+            color: 94940A
+    conference:
+        conference:
+            description: Opportunities to talk about Enarx
+            color: f98918
+    mentorship:
+        mentorship:
+            description: A request for mentorship on the project.
+            color: 0e8a16
+REPOS:
+    enarx:
+        - technology
+        - conference
+        - mentorship
+    enarx-keepldr:
+        - technology
+    enarx-wasmldr:
+        - technology
+    enarx-keepmgr:
+        - technology
+    client:
+        - technology
+    sgx:
+        - technology
+    sev:
+        - technology
+    sevctl:
+        - technology
+    gha-runner:
+        - technology
+    rfcs:
+        - technology
+    outreach:
+        - conference
