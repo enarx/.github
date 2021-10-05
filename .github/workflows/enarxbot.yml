@@ -50,7 +50,7 @@ jobs:
       BOT_TOKEN: ${{ secrets.BOT_TOKEN }}
     name: enarxbot
     steps:
-      - uses: enarx/bot@master
+      - uses: enarx/bot@main
   pull-request-responsibility:
     runs-on: ubuntu-latest
     env:
