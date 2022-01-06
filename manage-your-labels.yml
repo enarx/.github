@@ -51,6 +51,9 @@ LABEL_GROUPS:
         stretch-goal:
             description: Tasks that have been assigned, but are lower-priority than other items.
             color: 006b75
+        triage:
+            description: Issues that need to be triaged.
+            color: 800080
         wontfix:
             description: This will not be worked on
             color: ffffff
