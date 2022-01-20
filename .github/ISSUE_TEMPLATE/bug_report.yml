@@ -26,13 +26,13 @@ body:
           required: true
   - type: textarea
     attributes:
-      label: Current Behavior
+      label: Current Behaviour
       description: A concise description of what you're experiencing.
     validations:
       required: true
   - type: textarea
     attributes:
-      label: Expected Behavior
+      label: Expected Behaviour
       description: A concise description of what you expected to happen.
     validations:
       required: true
@@ -57,7 +57,7 @@ body:
   - type: textarea
     attributes:
       label: Steps To Reproduce
-      description: Steps to reproduce the behavior.
+      description: Steps to reproduce the behaviour.
       placeholder: |
         1. In this environment...
         2. With this config...
