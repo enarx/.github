@@ -39,7 +39,7 @@ body:
   - type: textarea
     attributes:
       label: Environment Information
-      description: "Please paste output of following command: `uname -a; enarx --version; enarx info`"
+      description: "Please paste output of following command as a user with the appropriate permissions to access SEV-SNP/SGX or KVM devices: `uname -a; enarx --version; enarx platform info`"
     validations:
       required: true
   - type: markdown
