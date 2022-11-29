@@ -1,0 +1,24 @@
+on: workflow_call
+
+concurrency:
+  group: ${{ github.workflow }}-${{ github.ref }}
+  cancel-in-progress: true
+
+# This workflow uses a third-party action.
+# The existence of a `permissions` key denies all
+# permissions except those explicitly specified.
+permissions:
+  contents: read
+  pull-requests: read
+
+jobs:
+  commit-message:
+    runs-on: ubuntu-latest
+    steps:
+    - name: Run Commisery
+      uses: tomtom-international/commisery-action@v2
+      with:
+        token: ${{ github.token }}
+        # Don't validate the pull request title.
+        validate-pull-request: false
+        validate-pull-request-title-bump: false
