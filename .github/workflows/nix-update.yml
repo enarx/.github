@@ -1,21 +1,31 @@
 name: Update Nix flake
 
-on:  workflow_call
+on: workflow_call
 
 jobs:
   nix-update:
     runs-on: ubuntu-latest
     steps:
       - uses: actions/checkout@v3
+
       - uses: nixbuild/nix-quick-install-action@v19
         with:
           nix_conf: |
             experimental-features = nix-command flakes
             access-tokens = github.com=${{ github.token }}
+
+      - uses: tibdex/github-app-token@v1
+        id: generate-token
+        with:
+          app_id: ${{ secrets.ENARX_BOT_APP_ID }}
+          private_key: ${{ secrets.ENARX_BOT_APP_PRIVATE_KEY }}
+
       - uses: jessestricker/nix-flake-update@v1
         id: nix-update
+
       - uses: peter-evans/create-pull-request@v4
         with:
+          token: ${{ steps.generate-token.outputs.token }}
           branch: nix-update
           commit-message: "build(nix): update flake lock"
           title: "build(nix): update flake lock"
