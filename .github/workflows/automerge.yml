@@ -5,6 +5,7 @@ jobs:
   auto-merge:
     permissions:
       pull-requests: write
+      contents: write
     runs-on: ubuntu-latest
     if: github.event.pull_request.draft == false
     steps:
