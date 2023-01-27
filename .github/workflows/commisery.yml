@@ -1,4 +1,9 @@
-on: workflow_call
+name: Commisery
+on:
+  workflow_call:
+  pull_request:
+    types: [edited, opened, synchronize, reopened]
+
 
 concurrency:
   group: ${{ github.workflow }}-${{ github.ref }}
@@ -9,7 +14,8 @@ concurrency:
 # permissions except those explicitly specified.
 permissions:
   contents: read
-  pull-requests: read
+  pull-requests: write
+  issues: write
 
 jobs:
   commit-message:
@@ -18,7 +24,6 @@ jobs:
     - name: Run Commisery
       uses: tomtom-international/commisery-action@v2
       with:
-        token: ${{ github.token }}
-        # Don't validate the pull request title.
+        token: ${{ secrets.GITHUB_TOKEN }}
         validate-pull-request: false
         validate-pull-request-title-bump: false
