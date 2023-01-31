@@ -18,7 +18,7 @@ jobs:
         id: generate-token
         with:
           app_id: ${{ vars.PROJECT_APP_ID }}
-          private-key: ${{ PROJECT_APP_PRIVATE_KEY }}
+          private-key: ${{ secrets.PROJECT_APP_PRIVATE_KEY }}
       - name: Place issues and prs into projects
         run: ./management/projects/update_all.sh
         shell: bash
