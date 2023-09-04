@@ -12,5 +12,5 @@ jobs:
       BOT_TOKEN: ${{ secrets.BOT_TOKEN }}
     name: mirror-labels
     steps:
-      - uses: actions/checkout@v3
+      - uses: actions/checkout@v4
       - uses: actions-automation/manage-your-labels@main
