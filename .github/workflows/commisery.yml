@@ -22,7 +22,7 @@ jobs:
     runs-on: ubuntu-latest
     steps:
     - name: Run Commisery
-      uses: tomtom-international/commisery-action@v2
+      uses: tomtom-international/commisery-action@v3
       with:
         token: ${{ secrets.GITHUB_TOKEN }}
         validate-pull-request: false
