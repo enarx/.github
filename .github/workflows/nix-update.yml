@@ -8,7 +8,7 @@ jobs:
     steps:
       - uses: actions/checkout@v4
 
-      - uses: nixbuild/nix-quick-install-action@v27
+      - uses: nixbuild/nix-quick-install-action@v28
         with:
           nix_conf: |
             experimental-features = nix-command flakes
